@@ -1,0 +1,23 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Користувачі</title>
+</head>
+<body>
+    {% if not users %}
+    <h1>Немає користувачів!</h1>
+    {% endif %}
+
+    <table border="1">
+        <thead align="center">
+            <td>Користувачі</td>
+        </thead>
+        {% for user in users %}
+        <tr align="center">
+            <td>{{user.username}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
